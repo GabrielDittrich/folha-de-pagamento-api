@@ -22,7 +22,7 @@ PUT {{base_url}}/funcionario/atualizar/2
 Content-Type: application/json
 
 {
-    "nome": "Novo Nome",
+    "nome": " Nome",
     "cpf": "Novo Cpf"
 }
 
