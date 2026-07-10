@@ -35,18 +35,23 @@ O projeto permite cadastrar funcionários, gerar folhas de pagamento e consultar
 
 ```text
 folha-de-pagamento-api
-├── FolhaDePagamento
-│   ├── Backend
-│   │   ├── Migrations
-│   │   ├── Models
-│   │   │   ├── AppDataContext.cs
-│   │   │   ├── Funcionario.cs
-│   │   │   └── Folha.cs
-│   │   ├── Program.cs
-│   │   ├── appsettings.json
-│   │   └── Backend.csproj
-│   └── FolhaDePagamento.sln
-└── README.md
+├── Backend
+│   ├── Migrations
+│   ├── Models
+│   │   ├── AppDataContext.cs
+│   │   ├── Funcionario.cs
+│   │   └── Folha.cs
+│   ├── Properties
+│   │   └── launchSettings.json
+│   ├── Program.cs
+│   ├── appsettings.json
+│   ├── appsettings.Development.json
+│   ├── request.http
+│   └── Backend.csproj
+├── FolhaDePagamento.sln
+├── README.md
+├── .gitignore
+└── .gitattributes
 ```
 
 ## Como executar o projeto
@@ -76,7 +81,7 @@ git clone https://github.com/GabrielDittrich/folha-de-pagamento-api.git
 2. Acesse a pasta do backend:
 
 ```bash
-cd folha-de-pagamento-api/FolhaDePagamento/Backend
+cd folha-de-pagamento-api/Backend
 ```
 
 3. Restaure as dependências:
@@ -116,6 +121,17 @@ O arquivo `.db` não é versionado no GitHub. Para criar o banco localmente, exe
 ```bash
 dotnet ef database update
 ```
+
+## Testando a API
+
+O projeto possui um arquivo `request.http` dentro da pasta `Backend`, com exemplos de requisições para testar os endpoints da API.
+
+Esse arquivo pode ser usado diretamente no VS Code com a extensão **REST Client**.
+
+Exemplo de uso:
+
+```text
+Backend/request.http
 
 ## Exemplos de requisições
 
